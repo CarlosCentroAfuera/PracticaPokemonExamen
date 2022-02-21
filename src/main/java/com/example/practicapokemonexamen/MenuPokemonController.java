@@ -94,10 +94,11 @@ public class MenuPokemonController implements PeleaPokemonInterface {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		} else {
+			Alert alerta = new Alert(Alert.AlertType.ERROR);
+			alerta.setContentText(pokemon.nombre + " está muerto");
+			alerta.showAndWait();
 		}
-		Alert alerta = new Alert(Alert.AlertType.ERROR);
-		alerta.setContentText(pokemon.nombre + " está muerto");
-
 
 	}
 
